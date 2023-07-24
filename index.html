@@ -890,7 +890,7 @@
                 <a class="header-nav__item" href="">ДОСТАВКА</a>
                 <a class="header-nav__item" href="">ФРАНШИЗА</a>
             </nav>
-            <div class="cart-btn">
+            <div class="cart-btn" data-overlay="order-overlay">
                 <span class="cart-btn__counter">2</span>
                 <img src="img/cart.svg" alt="">
             </div>
@@ -902,6 +902,9 @@
                     <img src="img/vk.svg" alt="">
                 </a>
             </nav>
+            <div class="account-btn" data-overlay="auth-overlay">
+                <img src="img/icons8-account-32.png" alt="">
+            </div>
             <a class="contact-btn" href="tel:+78463794137">
                 <div>+7 (846) 379-41-37</div>
                 <div>Перезвоните мне</div>
@@ -914,28 +917,32 @@
                 <img src="img/chevron-right.svg" alt="">
             </div>
             <div class="main-section__center">
-                <ul class="main-gallery">
+                <ul class="main-gallery" data-list="main-gallery">
                     <li class="main-gallery__item selected">
                         <img src="img/main-gallery.jpg" alt="">
                     </li>
                     <li class="main-gallery__item">
-                        <img src="img/main-gallery.jpg" alt="">
+                        <img src="img/main-gallery-2.jpg" alt="">
                     </li>
                     <li class="main-gallery__item">
-                        <img src="img/main-gallery.jpg" alt="">
+                        <img src="img/main-gallery-3.jpg" alt="">
                     </li>
                     <li class="main-gallery__item">
-                        <img src="img/main-gallery.jpg" alt="">
+                        <img src="img/main-gallery-4.jpg" alt="">
                     </li>
                     <li class="main-gallery__item">
-                        <img src="img/main-gallery.jpg" alt="">
+                        <img src="img/main-gallery-5.jpg" alt="">
                     </li>
                     <li class="main-gallery__item">
-                        <img src="img/main-gallery.jpg" alt="">
+                        <img src="img/main-gallery-6.jpg" alt="">
+                    </li>
+                    <li class="main-gallery__item">
+                        <img src="img/main-gallery-7.jpg" alt="">
                     </li>
                 </ul>
-                <ul class="paggination-list">
+                <ul class="paggination-list" data-list="main-gallery">
                     <li class="paggination-list__item selected"></li>
+                    <li class="paggination-list__item"></li>
                     <li class="paggination-list__item"></li>
                     <li class="paggination-list__item"></li>
                     <li class="paggination-list__item"></li>
@@ -945,6 +952,15 @@
             </div>
             <div class="main-section__next">
                 <img src="img/chevron-right.svg" alt="">
+            </div>
+        </section>
+        <section class="stories-section">
+            <div class="container">
+                <ul class="stories-list">
+                    <li class="stories-list__item" data-story="1">
+                        <img class="stories-list__preview" src="img/stories-preview.jpg" alt="">
+                    </li>
+                </ul>
             </div>
         </section>
         <section class="ingredient-section">
@@ -1064,6 +1080,31 @@
                             </div>
                         </li>
                     </ul>
+                    <div class="program-daily">
+                        <h4 class="program-daily__h4">Дневная калорийность:</h4>
+                        <ul class="kkal-list">
+                            <li class="kkal-list__item selected">900</li>
+                            <li class="kkal-list__item">1200</li>
+                        </ul>
+                    </div>
+                    <div class="program-duration">
+                        <div class="program-duration__header">
+                            <h4 class="program-duration__h4">Продолжительность</h4>
+                            <div class="program-duration__hint">Доставка осуществляется ежедневно вечером</div>
+                        </div>
+                        <ul class="duration-list">
+                            <li class="duration-list__item selected">
+                                <span>1 день</span>
+                            </li>
+                            <li class="duration-list__item">
+                                <span>1 неделя</span>
+                            </li>
+                            <li class="duration-list__item discount">
+                                <span>2 недели</span>
+                                <span>-10%</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="calculator-summary">
                     <h3 class="calculator-summary__h3">Ваша программа:</h3>
@@ -1083,7 +1124,7 @@
                     <div class="separator"></div>
                     <p class="calculator-summary__p">
                         Доставка ежедневно в любой двухчасовой интервал с
-                        19:00 до 00:00
+                        19:00 до 23:00
                     </p>
                     <div class="separator"></div>
                     <div class="checkbox-wrapper">
@@ -1094,9 +1135,57 @@
                         <span>Итого 1 дней:</span>
                         <span>800 ₽</span>
                     </div>
-                    <div class="calculator-summary__btn">СДЕЛАТЬ ЗАКАЗ</div>
-                    <div class="calculator-summary__btn">ПОДАРИТЬ</div>
+                    <div class="calculator-summary__btn" data-overlay="order-overlay">СДЕЛАТЬ ЗАКАЗ</div>
+                    <div class="calculator-summary__btn" data-overlay="order-overlay">ПОДАРИТЬ</div>
                 </div>
+            </div>
+            <div class="schelude">
+                <ul class="schelude-kkal">
+                    <li class="schelude-kkal__item selected">900 ккал</li>
+                    <li class="schelude-kkal__item">1200 ккал</li>
+                </ul>
+                <div class="separator"></div>
+                <ul class="schelude-days">
+                    <li class="schelude-days__item selected">Воскресенье</li>
+                    <li class="schelude-days__item">Понедельник</li>
+                    <li class="schelude-days__item">Понедельник</li>
+                    <li class="schelude-days__item">Понедельник</li>
+                    <li class="schelude-days__item">Понедельник</li>
+                </ul>
+                <div class="schelude__title">
+                    <span>Воскресенье</span>
+                    <span>23 июля</span>
+                </div>
+                <div class="schelude-menu">
+                    <div class="schelude-menu__item">
+                        <img class="schelude-menu__preview" src="img/menu-preview.png" alt="">
+                        <h5 class="schelude-menu__title">Пшённая сливочная каша</h5>
+                        <p class="schelude-menu__description">Завтрак</p>
+                        <div class="schelude-menu__kkal">
+                            <span>Ккал </span>
+                            <span>223</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contains">
+                    <div class="contains__item">
+                        <span>Ккал</span>
+                        <span class="green">882</span>
+                    </div>
+                    <div class="contains__item">
+                        <span>Белки</span>
+                        <span>882</span>
+                    </div>
+                    <div class="contains__item">
+                        <span>Жиры</span>
+                        <span>882</span>
+                    </div>
+                    <div class="contains__item">
+                        <span>Углеводы</span>
+                        <span>882</span>
+                    </div>
+                </div>
+                <div class="primary-btn">ХОЧУ ЭТО МЕНЮ</div>
             </div>
         </section>
         <section class="discount-section">
@@ -1104,17 +1193,17 @@
                 <h2 class="discount-section__h2">Закажи правильное питание <br> с выгодой до 20%</h2>
                 <div class="discount-wrapper">
                     <div class="discount-tabs">
-                        <div class="discount-tabs__item selected">
+                        <div class="discount-tabs__item selected" data-discount="3days">
                             <span>-2 кг за 3 дня</span>
                             <span>Скидка 15%</span>
                         </div>
-                        <div class="discount-tabs__item">
+                        <div class="discount-tabs__item" data-discount="5days">
                             <span>-4,5 кг за 5 дней</span>
                             <span>Скидка 20%</span>
                         </div>
                     </div>
                     <div class="discount-content">
-                        <div class="discount-content__item">
+                        <div class="discount-content__item selected" data-discount="3days">
                             <div class="discount-content__free-delivery">
                                 <p>
                                     Бесплатная <br>
@@ -1131,6 +1220,26 @@
                             <p class="discount-content__p">
                                 Ваша выгода - 
                                 <span class="red">630 ₽</span>
+                            </p>
+                            <div class="primary-btn">ЗАКАЗАТЬ</div>
+                        </div>
+                        <div class="discount-content__item" data-discount="5days">
+                            <div class="discount-content__free-delivery">
+                                <p>
+                                    Бесплатная <br>
+                                    <b>доставка</b>
+                                </p>
+                                <span>Д</span>
+                            </div>
+                            <h4 class="discount-content__h4">Похудей быстро</h4>
+                            <h5 class="discount-content__h5">Детокс курс на 5 дня</h5>
+                            <div class="price-wrapper">
+                                <span>7 000 ₽</span>
+                                <span>5 600 ₽</span>
+                            </div>
+                            <p class="discount-content__p">
+                                Ваша выгода - 
+                                <span class="red">1400 ₽</span>
                             </p>
                             <div class="primary-btn">ЗАКАЗАТЬ</div>
                         </div>
@@ -1250,30 +1359,30 @@
             <div class="container">
                 <h2 class="answers-section__title">Вопросы и ответы</h2>
                 <div class="answers-header">
-                    <div class="answers-header__item selected">
+                    <div class="answers-header__item selected" data-link="answers-1">
                         <i class="fas fa-child"></i>
                         <span>Похудение</span>
                     </div>
-                    <div class="answers-header__item">
+                    <div class="answers-header__item" data-link="answers-2">
                         <i class="fas fa-carrot"></i>
-                        <span>Похудение</span>
+                        <span>Продукты</span>
                     </div>
-                    <div class="answers-header__item">
+                    <div class="answers-header__item" data-link="answers-3">
                         <i class="fas fa-file-invoice-dollar"></i>
-                        <span>Похудение</span>
+                        <span>Тарифы</span>
                     </div>
-                    <div class="answers-header__item">
+                    <div class="answers-header__item" data-link="answers-4">
                         <i class="fas fa-credit-card"></i>
-                        <span>Похудение</span>
+                        <span>Оплата и доставка</span>
                     </div>
-                    <div class="answers-header__item">
+                    <div class="answers-header__item" data-link="answers-5">
                         <i class="fas fa-temperature-low"></i>
-                        <span>Похудение</span>
+                        <span>Хранение </span>
                     </div>
                 </div>
                 <div class="answers-content">
-                    <ul class="answers-list">
-                        <li class="answers-list__item opened">
+                    <ul class="answers-list" data-link="answers-1">
+                        <li class="answers-list__item">
                             <div class="answers-list__header">
                                 <span>Сколько калорий в день нужно потреблять, чтобы похудеть?</span>
                             </div>
@@ -1325,18 +1434,288 @@
                             </div>
                             <div class="answers-list__content">
                                 <p class="answers-list__p">
-                                    Похудение состоит из трех базовых элементов:
-                                    - правильное питание
-                                    - физические упражнения
-                                    - полезные привычки.
-                                    Мы предлагаем вам простые правила:
-                                    1. Зарядка каждое утро
-                                    2. Водный баланс.
-                                    3. Освоить привычку режимного питания: каждый прием пищи в одно и то же время.
-                                    4. Подниматься везде по лестнице. Эта полезная привычка не только будет заменять кардио тренировку, но и укрепит ягодицы.
-                                    5. Рациональный тренировочный процесс (не менее 3-х раз в неделю) силовых, кардио и функциональных тренировок.
-                                    6. Ежедневные прогулки. За день нужно проходить от 8000 до 10000 шагов.
+                                    Похудение состоит из трех базовых элементов: <br><br>
+                                    - правильное питание<br>
+                                    - физические упражнения<br>
+                                    - полезные привычки.<br><br>
+                                    Мы предлагаем вам простые правила:<br><br>
+                                    1. Зарядка каждое утро<br>
+                                    2. Водный баланс.<br>
+                                    3. Освоить привычку режимного питания: каждый прием пищи в одно и то же время.<br>
+                                    4. Подниматься везде по лестнице. Эта полезная привычка не только будет заменять кардио тренировку, но и укрепит ягодицы.<br>
+                                    5. Рациональный тренировочный процесс (не менее 3-х раз в неделю) силовых, кардио и функциональных тренировок.<br>
+                                    6. Ежедневные прогулки. За день нужно проходить от 8000 до 10000 шагов.<br>
                                     7. Каждодневный сон, способствующий выставлению всего организма- 8 часов.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="answers-list__item">
+                            <div class="answers-list__header">
+                                <span>Читмил — можно или нет?</span>
+                            </div>
+                            <div class="answers-list__content">
+                                <p class="answers-list__p">
+                                    Конечно, можно. Однако в нашей линейке "Хочу похудеть" присутствуют в рационе сладости. А это означает, что вам, на психологическом уровне, не будет казаться, что вы ограничиваете себя в чем-то. Следовательно, потребность в читмиле исчезает.
+                                    Худеть с нами легко!
+                                </p>
+                            </div>
+                        </li>
+                        <li class="answers-list__item">
+                            <div class="answers-list__header">
+                                <span>Мне не надоест ваше меню?</span>
+                            </div>
+                            <div class="answers-list__content">
+                                <p class="answers-list__p">
+                                    С нами вы не будете ощущать голод и ограничения. Наши блюда будут не только безумно вкусными и низкокалорийными, но ещё и приготовленными из отборных продуктов: премиальная мраморная говядина крупы, мясо, овощи, фрукты, специи, молочное продукты. С нашими правильными тортами, муссами, конфетами вам будет комфортно худеть, употребляя сладкое, без вреда для фигуры! Все наши линейки можно чередовать, используя меню каждой, что делает ваш путь похудения очень интересным и насыщенным.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="answers-list__item">
+                            <div class="answers-list__header">
+                                <span>Хочу заменить один из приемов пищи — это возможно?</span>
+                            </div>
+                            <div class="answers-list__content">
+                                <p class="answers-list__p">
+                                    С нашим «конструктором меню» вы сможете сами корректировать свои рационы. Это так просто! Непереносимость рыбы? Замените на мясо. Хотите обеспечить себя большим количеством калорий в определенный день? Можете добавить нужное блюдо в этот день. Можете убирать блюдо, менять их, добавлять! Все на ваше усмотрение!
+                                </p>
+                            </div>
+                        </li>
+                        <li class="answers-list__item">
+                            <div class="answers-list__header">
+                                <span>Обязательно ли ходить в зал, чтобы похудеть?</span>
+                            </div>
+                            <div class="answers-list__content">
+                                <p class="answers-list__p">
+                                    С помощью нашей линейки "Хочу похудеть" вы сможете сбросить вес, не прибегая к спортивным занятиям. В этой линейке рацион составляет всего 900 ккал, что говорит о значительно большем потреблении килокалорий, используемых за день организмом, чем килокалорий, полученных с едой.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="answers-list__item">
+                            <div class="answers-list__header">
+                                <span>Как поддерживать вес после похудения?</span>
+                            </div>
+                            <div class="answers-list__content">
+                                <p class="answers-list__p">
+                                    Как ни странно, но похудеть гораздо легче, чем удержать новый вес. На помощь приходят формулы Миффлина-Сан Жеора и Харриса — Бенедикта. С их помощью вы сможете установить свой дневной калораж, что будет поддерживать ваш вес.
+                                    Однако не стоит забывать о сбалансированном и качественном питании.
+                                    Данные возможности представлены в линейке "Не хочу готовить" с 1500 ккал или 1800 ккал.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="answers-list" data-link="answers-2">
+                        <li class="answers-list__item">
+                            <div class="answers-list__header">
+                                <span>Используете ли вы сахар или сахарозаменитель. Если да, то какой?</span>
+                            </div>
+                            <div class="answers-list__content">
+                                <p class="answers-list__p">
+                                    В наших линейках, мы вместо сахара используется сахарозаменитель " Fitparad 7 ". О составе, качестве и свойствах любого продукта вы всегда можете проконсультироваться у сотрудников call-центра.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="answers-list__item">
+                            <div class="answers-list__header">
+                                <span>Какое мясо вы используете для готовки блюд?</span>
+                            </div>
+                            <div class="answers-list__content">
+                                <p class="answers-list__p">
+                                    В нашем меню присутствую только диетические сорта мяса: мраморная говядина, индейка, куриное филе, что гарантирует полноценное питание, богатое витаминами и микроэлементами. Свинину ни в каких линейках мы не используем. Блюда готовим на пару и по технологиям су-вид. Так они получаются вкусными и отмеченными
+                                </p>
+                            </div>
+                        </li>
+                        <li class="answers-list__item">
+                            <div class="answers-list__header">
+                                <span>Какие молочные продукты вы используете для готовки блюд?</span>
+                            </div>
+                            <div class="answers-list__content">
+                                <p class="answers-list__p">
+                                    В наших линейках мы используем натуральные фермерские молочные продукты оптимальные по калорийности: молоко 0-2,5%, йогурт – 2%, творог – 2-5%
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="answers-list" data-link="answers-3">
+                        <li class="answers-list__item">
+                            <div class="answers-list__header">
+                                <span>Можно ли менять местами приёмы в течение дня?</span>
+                            </div>
+                            <div class="answers-list__content">
+                                <p class="answers-list__p">
+                                    Наши диетологи очень ответственно подходят к расположению каждого блюда, согласно временным промежуткам. Составленное расписание, заключённое в правильном распределении углеводов на протяжении всего дня, что помогает нашим клиентам быстро добиваться нужного результата. Именно поэтому, желательно, соблюдать суточный режим блюд.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="answers-list__item">
+                            <div class="answers-list__header">
+                                <span>Насколько часто у меня будет меняться меню?</span>
+                            </div>
+                            <div class="answers-list__content">
+                                <p class="answers-list__p">
+                                    Мы собираем обратную связь после каждого заказа и постоянно работаем над обновлением блюд и продуктов, поэтому на данный момент в течении месяца у вас будет полностью разнообразное меню на каждый день. Также мы берём во внимание предпочтения каждого клиента.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="answers-list__item">
+                            <div class="answers-list__header">
+                                <span>Кто и как рассчитывает КБЖУ?</span>
+                            </div>
+                            <div class="answers-list__content">
+                                <p class="answers-list__p">
+                                    Наши диетологи и IT система,  помогают рассчитать КБЖУ каждого продукта, производя выборочный анализ блюд, используя специализированное программное обеспечение, нормативные документы и справочники с показателями КБЖУ.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="answers-list__item">
+                            <div class="answers-list__header">
+                                <span>Какие типы меню доступны для заказа и чем они отличаются?</span>
+                            </div>
+                            <div class="answers-list__content">
+                                <p class="answers-list__p">
+                                    Мы разработали 7 линеек, которые подойдут каждому, в зависимости от выбранной цели и изначальных данных. Все меню сбалансировано и варьируется от 900 до 3 200 ккал/день.
+                                    Низкокалорийная линейка "Хочу похудеть"— это трехразовое питание на 900 ккал/день, которое без физических упражнений, помогает вам похудеть. 1200 ккал - это уже пятиразовое питание, где один из приёмов заменяется бутылочкой детокс смузи.
+                                    Линейка "Не хочу готовить"— это пятиразовое питание на 1 500 ккал/день для спорта и на каждый день, плюс смузи и напиток на каждый день. 1800 ккал - включает в себя уже шестиразовое питание, где также присутствуют смузи и напитки. 
+                                    Линейка "Хочу набрать массу"— это шестиразовое питание от 2500 до 3200 ккал/день для создания красивых и подкаченных форм, а также для их поддержания.
+                                    Курс Detox — программа рассчитана от 2 до 7 дней, примерно на 1000 ккал/день, которая способствует полному очищению организма от шлаков на смузи и соках.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="answers-list__item">
+                            <div class="answers-list__header">
+                                <span>Сколько времени я сэкономлю с Will Food?</span>
+                            </div>
+                            <div class="answers-list__content">
+                                <p class="answers-list__p">
+                                    С помощью нашего питания вы получите еще 20 часов дополнительного времени в неделю! Так, как теперь мы будем составлять ваше подробное меню, готовить для вас, высчитывая КБЖУ каждого блюда. Все сделаем за вас! Качественно и профессионально!
+                                </p>
+                            </div>
+                        </li>
+                        <li class="answers-list__item">
+                            <div class="answers-list__header">
+                                <span>Нужно ли есть другие продукты вместе с питанием?</span>
+                            </div>
+                            <div class="answers-list__content">
+                                <p class="answers-list__p">
+                                    Меню, предоставленное в наших линейках идеально сбалансировано. Не нужно покупать лишние продукты. С нами можно худеть без ущерба для вашего кошелька.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="answers-list__item">
+                            <div class="answers-list__header">
+                                <span>Почему питание столько стоит?</span>
+                            </div>
+                            <div class="answers-list__content">
+                                <p class="answers-list__p">
+                                    Мы предлагаем питаться вкусно и правильно всего за 150₽ за порцию. Это гораздо дешевле ланчей в кафе. Вы можете не переживать за качество наших продуктов и их доставку. Она бесплатная!
+                                    Внимание! У нас всегда есть для вас подарки и скидки. Участвуйте в наших марафонах, следите за скидками и подписывайтесь на наши обновления.
+                                    Специально для вас:
+                                    Подпишись на 30 или 60 дней питания и получи скидку 15% на каждую неделю питания.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="answers-list" data-link="answers-4">
+                        <li class="answers-list__item">
+                            <div class="answers-list__header">
+                                <span>Как я могу оплатить свой заказ?</span>
+                            </div>
+                            <div class="answers-list__content">
+                                <p class="answers-list__p">
+                                    Заказ вы можете оплатить несколькими способами: Банковской картой онлайн или наличными курьеру при первой доставке.
+                                    Важно: оплата подписки происходит до 19:00 дня первой доставки, иначе автоматически включается заморозка.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="answers-list__item">
+                            <div class="answers-list__header">
+                                <span>Как осуществлялась доставка?</span>
+                            </div>
+                            <div class="answers-list__content">
+                                <p class="answers-list__p">
+                                    Мы доставляем ежедневно вечером, в любой удобный для вас двухчасовой интервал:
+                                    .
+                                    19.00-21.00
+                                    20.00-22.00
+                                    21.00-23.00
+                                    .
+                                    Заказы в отдаленные районы г.Самары можно посмотреть на карте нашего сайта, в случае если ваш адрес не попадает в зону доставки сообщите об этом нашему оператору call центра.
+                                    Зоны бесплатной доставки указана у нас на сайте на карте, в разделе «Доставка». За пределы зоны доставка осуществляется на платной основе и обговаривается индивидуально. И не забывайте, что вы всегда можете оформить доставку в офис если работаете в городе.
+                                    При форс-мажорных обстоятельствах (ваш телефон не доступен; никого нет дома) курьер может оставить ваш заказ у консьержа или у охраны. Если оставить заказ нет возможности, то курьер ожидает 15 минут и вынужден будет ехать к следующему клиенту.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="answers-list__item">
+                            <div class="answers-list__header">
+                                <span>Как получить доставку день в день?</span>
+                            </div>
+                            <div class="answers-list__content">
+                                <p class="answers-list__p">
+                                    Все заказы мы принимаем и отменяем за день до доставки. Возможность получения заказа день в день, уточняйте у оператора.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="answers-list__item">
+                            <div class="answers-list__header">
+                                <span>Когда изменить время доставки, доставки на другой день или отменить можно?</span>
+                            </div>
+                            <div class="answers-list__content">
+                                <p class="answers-list__p">
+                                    Любое кол-во рационов можно перенести за день до доставки. День в день, к сожалению мы не отменяем заказы.
+                                    Адрес и время доставки, можно изменить до 18.00 настоящего дня, на любой другой удобный для вас.
+
+                                    ВАЖНО: В случае изменения адреса или времени доставки после 18.00 будет уже платная доставка 200 руб.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="answers-list" data-link="answers-5">
+                        <li class="answers-list__item">
+                            <div class="answers-list__header">
+                                <span>Какой срок хранения вашей продукции?</span>
+                            </div>
+                            <div class="answers-list__content">
+                                <p class="answers-list__p">
+                                    Контейнеры с едой необходимо хранить в холодильнике соблюдая температурный режим, как правило, от 2 до 6 С. На контейнерах указана дата производства. Мы рекомендуем хранить блюда не более 48 часов во избежание их порчи.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="answers-list__item">
+                            <div class="answers-list__header">
+                                <span>Можно ли разогревать еду в микроволновке?</span>
+                            </div>
+                            <div class="answers-list__content">
+                                <p class="answers-list__p">
+                                    Мы используем эко посуду, которая не выделяет никаких вредных веществ при нагревании. Поэтому просто предварительно снимите крышку и поместите контейнер в микроволновку на пару минут. Важно: уточнить в вашей распечатке, нужно ли разогревать то или иное блюдо.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="answers-list__item">
+                            <div class="answers-list__header">
+                                <span>Нужно ли готовить ваши блюда после получения?</span>
+                            </div>
+                            <div class="answers-list__content">
+                                <p class="answers-list__p">
+                                    Наши блюда полностью готовы и герметично упакованы. Вам остается только снять крышки, и разогреть блюда в микроволновке и еда будет готова.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="answers-list__item">
+                            <div class="answers-list__header">
+                                <span>Смогу ли я питаться с Will Food в разъездах или носить обеды с собой на работу?</span>
+                            </div>
+                            <div class="answers-list__content">
+                                <p class="answers-list__p">
+                                    Наши контейнеры герметично упакованы и компактны. Поэтому наши рационы удобно брать с собой на работу или в дорогу. Важно помнить, что при длительной поездке, еду лучше перевозить в холодильной сумке, для избежания порчи.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="answers-list__item">
+                            <div class="answers-list__header">
+                                <span>Можно ли есть Will Food, не разогревая?</span>
+                            </div>
+                            <div class="answers-list__content">
+                                <p class="answers-list__p">
+                                    Все зависит от ваших вкусовых предпочтений. Вы можете съесть томатный суп и десерты без разогрева. Горячие блюда все же будут вкуснее и полезнее, если их предварительно разогреть.
                                 </p>
                             </div>
                         </li>
@@ -1416,7 +1795,174 @@
             </div>
         </div>
     </footer>
+    <div class="overlay">
+        <div class="container">
+            <div class="overlay-item" data-overlay="auth-overlay" id="auth-form">
+                <div class="overlay__close-btn"></div>
+                <div class="container">
+                    <div class="step-header">
+                        <h2 class="overlay-h2"> Укажите телефон, чтобы войти в личный кабинет </h2>
+                        <div class="step-info">
+                            <span class="current"> Шаг 1 </span>
+                            <span class="extended"> из 3 </span>
+                        </div>
+                    </div>
+                    <p class="overlay-p">Мы вышлем на него смс с проверочным кодом</p>
+                    <form class="login-form" action="">
+                        <div class="input-wrapper">
+                            <input class="input_cubed" placeholder="" id="login-tel" type="tel">
+                            <label for="login-tel">Введите номер телефона</label>
+                        </div>
+                        <button class="jf-btn">Получить код</button>
+                    </form>
+                    <p class="overlay-disclaimer">
+                        Нажимая «Получить код», вы даете согласие на получение СМС и принимаете условия 
+                        <a href="">пользовательского соглашения</a>
+                    </p>
+                </div>
+            </div>
+            <div class="overlay-item" data-overlay="order-overlay">
+                <div class="overlay__close-btn"></div>
+                <div class="container">
+                    <h2 class="overlay-h2"> Оформление заказа </h2>
+                    <form class="order-form" action="">
+                        <ul class="order-list">
+                            <li class="order-list__item">
+                                <span>Хочу похудеть 1 день</span>
+                                <span>800 ₽  / день</span>
+                            </li>
+                        </ul>
+                        <section class="form-section">
+                            <h3 class="form-section__h3">Личные данные</h3>
+                            <div class="container">
+                                <div class="input-wrapper">
+                                    <input class="input_cubed" placeholder="" id="order-name" type="text">
+                                    <label for="order-name">Ваше имя</label>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input class="input_cubed" placeholder="" id="order-tel" type="tel">
+                                    <label for="order-tel">Введите номер телефона</label>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="form-section">
+                            <h3 class="form-section__h3">Адрес доставки</h3>
+                            <div class="container">
+                                <div class="input-wrapper">
+                                    <input class="input_cubed" placeholder="" id="order-address1" type="text">
+                                    <label for="order-address1">Улица, дом, корпус</label>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input class="input_cubed" placeholder="" id="order-address2" type="text">
+                                    <label for="order-address2">Подъезд, квартира, офис, этаж</label>
+                                </div>
+                                <div class="input-wrapper">
+                                    <h4 class="form-section__h4">Способ оплаты:</h4>
+                                    <select class="select" name="" id="order-payment-type">
+                                        <option value="Наличными курьеру">Наличными курьеру</option>
+                                        <option value="Онлайн перевод">Онлайн перевод</option>
+                                        <option value="Подарочный сертификат">Подарочный сертификат</option>
+                                    </select>
+                                    <label for="order-payment-type"></label>
+                                </div>
+                                <div class="input-wrapper">
+                                    <h4 class="form-section__h4">Время доставки:</h4>
+                                    <select class="select" name="" id="order-time">
+                                        <option value="Наличными курьеру">19:00-21:00</option>
+                                        <option value="Онлайн перевод">20:00-22:00</option>
+                                        <option value="Онлайн перевод">21:00-23:00</option>
+                                        <option value="Онлайн перевод">22:00-00:00</option>
+                                    </select>
+                                    <label for="order-time"></label>
+                                </div>
+                                <div class="input-wrapper">
+                                    <textarea class="textarea_cubed" placeholder="" name="" id="" cols="30" rows="10"></textarea>
+                                    <label for="order-tel">Комментарий курьеру</label>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input class="input_cubed" placeholder="" type="date">
+                                    <label for="order-time">Дата начала доставок (в формате-число,месяц)</label>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input class="input_cubed" placeholder="" type="text">
+                                    <label for="order-time">Ваш промокод</label>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="form-section">
+                            <div class="checkbox-wrapper">
+                                <input class="checkbox" type="checkbox" name="" id="">
+                                <label for="">
+                                    Нажимая кнопку "Заказать!", я соглашаюсь с 
+                                    <a href="">условиями оферты</a>  и даю согласие на 
+                                    <a href="">обработку персональных данных.</a>
+                                </label>
+                            </div>
+                        </section>
+                        <button class="jf-btn">Заказать!</button>
+                    </form>
+                </div>
+            </div>
+            <div class="stories-overlay">
+                <div class="container">
+                    <button class="stories-overlay__prev">
+                        <img src="img/arrow-left.svg" alt="">
+                    </button>
+                    <div class="story" data-story="1">
+                        <div class="story-header">
+                            <ul class="story-paggination">
+                                <li class="story-paggination__item">
+                                    <div class="story-paggination__progress" style="width: 0%"></div>
+                                </li>
+                                <li class="story-paggination__item">
+                                    <div class="story-paggination__progress" style="width: 0%"></div>
+                                </li>
+                                <li class="story-paggination__item">
+                                    <div class="story-paggination__progress" style="width: 0%"></div>
+                                </li>
+                            </ul>
+                            <div class="story-header__wrapper">
+                                <div class="story-info">
+                                    <img class="story-info__icon" src="img/apartament-preview.jpg" alt="">
+                                    <div class="story-info__title">Имя</div>
+                                    <span class="story-info__date">23 ч.</span>
+                                </div>
+                                <div class="story-actions">
+                                    <button class="play-btn"></button>
+                                    <button class="mute-btn"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="story-content">
+                            <ul class="story-content__list">
+                                <li class="story-content__item">
+                                    <video playsinline src="img/story_video.mp4"></video>
+                                </li>
+                                <li class="story-content__item">
+                                    <video playsinline src="img/story_video.mp4"></video>
+                                </li>
+                                <li class="story-content__item">
+                                    <video playsinline src="img/story_video.mp4"></video>
+                                </li>
+                            </ul>
+                            <div class="story-center">
+                            </div>
+                        </div>
+                        <div class="story-footer">
+                        </div>
+                    </div>
+                    <button class="stories-overlay__next">
+                        <img src="img/arrow-left.svg" alt="">
+                    </button>
+                    <button class="stories-overlay__close">
+                        <svg aria-label="Закрыть" class="x1lliihq x1n2onr6" color="rgb(255, 255, 255)" fill="rgb(255, 255, 255)" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Закрыть</title><polyline fill="none" points="20.643 3.357 12 12 3.353 20.647" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></polyline><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" x1="20.649" x2="3.354" y1="20.649" y2="3.354"></line></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/main.js"></script>
     <script>
